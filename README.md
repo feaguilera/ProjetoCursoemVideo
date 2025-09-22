@@ -7,4 +7,4 @@ Logo acima voce encontrara todos os meus projetos que estou realizando e estudan
 
 Caso queira visualizar as paginas so entrar neste link
 
-[Clique Aqui](https://feaguilera.github.io/Projetos-de-Estudos/)
+[Clique Aqui](https://feaguilera.github.io/Projetos-de-Estudos/Estudos/index.html)
