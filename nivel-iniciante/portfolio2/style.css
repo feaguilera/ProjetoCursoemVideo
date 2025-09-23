@@ -1,0 +1,822 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap');
+
+:root{
+    --yellow:#f9ca24;
+}
+
+*{
+    font-family: 'PT Sans', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    text-transform: all .2s linear;
+}
+
+*::selection{
+    background: var(--yellow);
+    color: #333;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width: 1.4rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: #222;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--yellow);
+}
+
+body{
+    background: #111;
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.btn{
+    padding: .7rem 3rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+.btn i{
+    padding: 0 .5rem;
+    font-size: 1.8rem;
+}
+
+.btn:hover{
+    background: var(--yellow);
+}
+
+.heading{
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid #fff4;
+    color: #fff;
+}
+
+.heading span{
+    color: var(--yellow);
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header .user img{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: .7rem solid var(--yellow);
+}
+
+header .user .name{
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+header .user .post{
+    font-size: 2rem;
+    color: #eee;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+header .navbar ul li a {
+    display: block;
+    padding: 1rem 8rem; 
+    margin: 1.5rem 0;
+    background: #333;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 2rem;
+}
+
+header .navbar ul li a:hover {
+    background: var(--yellow);
+}
+
+#menu{
+    position: fixed;
+    top:2rem; right: 2rem;
+    background: #333;
+    color:#fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 15rem;
+}
+
+.home h3{
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.home h1{
+    font-size: 5rem;
+    color: #fff;
+}
+
+.home h1 span{
+    color: var(--yellow);
+}
+
+.home p{
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+.about .row .info{
+    flex:1 1 48rem;
+    padding: 2rem 1rem;
+    padding-left: 6rem;
+}
+
+.about .row .info h3{
+    font-size: 2rem;
+    color: var(--yellow);
+    padding: 1rem 0;
+    font-weight: normal;
+}
+
+.about .row .info h3 span{
+    color: #eee;
+    padding: 0 .5rem;
+}
+
+.about .row .counter{
+    flex:1 1 48rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about .row .counter .box{
+    width: 20rem;
+    background: #222;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+.about .row .counter .box span{
+     font-size: 4rem;
+     color: var(--yellow);
+}
+
+.about .row .counter .box h3{
+    font-size: 2rem;
+    color: #fff;
+}
+
+
+.education .box-container{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    padding-left: 3rem;
+}
+
+.education .box-container .box{
+    width: 27rem;
+    margin: 4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid #fff;
+    position: relative;
+}
+
+.education .box-container .box span{
+    font-size: 1.3rem;
+    background: #222;
+    color: #fff;
+    border-radius: 5rem;
+    padding: .5rem 2.5rem;
+}
+
+.education .box-container .box h3{
+    font-size: 2rem;
+    color: var(--yellow);
+    padding-top: 1.5rem;
+}
+
+.education .box-container .box p{
+    font-size: 1.4rem;
+    color: #eee;
+    padding-top: 1rem;
+}
+
+.education .box-container .box i{
+    position: absolute;
+    top: -1.5rem; 
+    left:-2.5rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    background: var(--yellow);
+}
+
+.portfolio .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.portfolio .box-container .box {
+    height: 20rem;
+    width: 26rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.portfolio .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.portfolio .box-container .box:hover img {
+    transform: scale(1.2); /* Corrige o valor da escala */
+}
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact .row .contact{
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+}
+
+.contact .row form{
+    flex: 1 1 45rem;
+    padding: 2rem;
+    margin: 2rem;
+    margin-bottom: 4rem;
+}
+
+.contact .row form .box{
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background: #3333;
+    color: #fff;
+    text-transform: none;
+    font-size: 1.7rem;
+    width: 100%;
+    transition: background 0.3s ease; /* Transição suave */
+}
+
+.contact .row form .box::placeholder{
+    text-transform: capitalize;
+}
+
+.contact .row form .message{
+    height: 15rem;
+    resize: none;
+}
+
+.contact .row .content .title{
+    text-transform: uppercase;
+    color:#fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.contact .row .content .info h3{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+    font-weight: normal;
+}
+
+.contact .row .content .info h3 i{
+    padding-right: 1rem;
+    color: var(--yellow);
+}
+
+.top{
+    position: fixed;
+    bottom: 7.5rem; right: 2rem;    
+    z-index: 100;
+    display: none;
+    color: var(--yellow);
+}
+
+
+/* Estilo para o botão do GitHub */
+.github-btn {
+    display: inline-flex; /* Alinha o ícone dentro do botão */
+    align-items: center; /* Centraliza o ícone verticalmente */
+    justify-content: center; /* Centraliza o ícone horizontalmente */
+    background-color: #333; /* Cor de fundo do botão */
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    color: #fff; /* Cor do ícone */
+    padding: 10px; /* Espaçamento interno do botão */
+    cursor: pointer; /* Cursor em forma de mão ao passar sobre o botão */
+    font-size: 2.5rem; /* Tamanho do ícone */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+/* Estilo para o ícone dentro do botão */
+.github-btn i {
+    font-size:2.5rem; /* Aumenta o tamanho do ícone */
+    
+}
+
+/* Estilo para o endereço */
+.address {
+    font-size: 1.5rem; /* Tamanho da fonte do endereço */
+    color: #eee; /* Cor do texto do endereço */
+    margin-top: 10px; /* Espaçamento acima do endereço */
+}
+
+
+
+.linkedin-btn{
+    display: inline-flex; /* Alinha o ícone dentro do botão */
+    align-items: center; /* Centraliza o ícone verticalmente */
+    justify-content: center; /* Centraliza o ícone horizontalmente */
+    background-color: #333; /* Cor de fundo do botão */
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    color: #fff; /* Cor do ícone */
+    padding: 10px; /* Espaçamento interno do botão */
+    cursor: pointer; /* Cursor em forma de mão ao passar sobre o botão */
+    font-size: 2.5rem; /* Tamanho do ícone */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+/* Estilo para o ícone dentro do botão */
+.github-btn i {
+    font-size:2.5rem; /* Aumenta o tamanho do ícone */
+    
+}
+
+/* Estilo para o endereço */
+.address {
+    font-size: 1.5rem; /* Tamanho da fonte do endereço */
+    color: #eee; /* Cor do texto do endereço */
+    margin-top: 10px; /* Espaçamento acima do endereço */
+}
+
+.youtube-btn{
+    display: inline-flex; /* Alinha o ícone dentro do botão */
+    align-items: center; /* Centraliza o ícone verticalmente */
+    justify-content: center; /* Centraliza o ícone horizontalmente */
+    background-color: #333; /* Cor de fundo do botão */
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    color: #fff; /* Cor do ícone */
+    padding: 10px; /* Espaçamento interno do botão */
+    cursor: pointer; /* Cursor em forma de mão ao passar sobre o botão */
+    font-size: 2.5rem; /* Tamanho do ícone */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+/* Estilo para o ícone dentro do botão */
+.github-btn i {
+    font-size:2.5rem; /* Aumenta o tamanho do ícone */
+    
+}
+
+/* Estilo para o endereço */
+.address {
+    font-size: 1.5rem; /* Tamanho da fonte do endereço */
+    color: #eee; /* Cor do texto do endereço */
+    margin-top: 10px; /* Espaçamento acima do endereço */
+}
+
+.skills {
+    padding: 4rem 2rem;
+    background: #222;
+    color: #fff;
+}
+
+.skills .heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+.skills .heading span {
+    color: var(--yellow);
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skill-column {
+    flex: 1 1 30%;
+    margin: 1rem;
+}
+
+.skill-item {
+    position: relative;
+    background: #333;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: scale(1.1);
+}
+
+.icon {
+    font-size: 4rem;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.skill-info {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.skill-item:hover .skill-info {
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+.skill-info h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--yellow);
+}
+
+.skill-info p {
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.portfolio {
+    padding: 2rem;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.menu {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.menu-btn {
+    background: #333;
+    border: none;
+    padding: 2.5rem 12rem;
+    color: #fff;
+    font-size: 2.5rem; /* Aumenta o tamanho da fonte */
+    margin: 0 0.5rem;
+    cursor: pointer;
+    border-radius: 0.9rem;
+    transition: background 0.3s;
+}
+
+
+.menu-btn:hover {
+    background: #f0b300;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.projects-box {
+    flex: 1;
+    margin: 1rem;
+    display: none; /* Hidden by default */
+}
+
+.projects-box h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    width: 100%;
+    height: 300px; /* Aumente o valor para a altura desejada */
+    background-color: #f0f0f0;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project img {
+    width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: center; /* Define uma largura máxima para a imagem */
+    max-height: 300px; /* Define uma altura máxima para a imagem */
+    object-fit: cover; /* Corta a imagem para se ajustar ao tamanho sem distorção */
+    transition: transform 0.3s ease; /* Mantém o efeito de ampliação ao passar o mouse */
+}
+
+.project:hover img {
+    transform: scale(1.05); /* Ajuste o valor para o efeito de ampliação desejado */
+}
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    left: 1;
+    width: 10%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project:hover .project-info {
+    opacity: 1;
+}
+
+.project-info h3 {
+    margin: 0 0 0.5rem;
+    
+}
+
+.project-info p {
+    margin: 0 0 1rem;
+    
+}
+
+.project-info .btn {
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background: var(--yellow);
+    color: #333;
+    text-align: center;
+    border-radius: 0.3rem;
+    text-decoration: none;
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+
+}
+
+.project-info .btn:hover {
+    background: #f0b300;
+}
+
+
+
+
+
+
+
+.menu-btn.active {
+    background: #f0b300; /* Cor de fundo amarela */
+    color: #fff; /* Cor do texto */
+}
+
+
+.portfolio .projects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas de largura igual */
+    gap: 200px; /* Espaçamento entre os projetos */
+    margin-top: 20px;
+}
+
+.project {
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.project:hover {
+    transform: translateY(-10px); /* Efeito ao passar o mouse */
+}
+
+.project img {
+    width: 100%;
+    height: 100%; /* Certifique-se de que a imagem se ajuste à altura da caixa */
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.project-info p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.project-info .btn {
+    font-size: 1em;
+    padding: 10px 15px;
+    background-color: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.project-info .btn:hover {
+    background-color: #333;
+}
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width:1200px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .home{
+        padding: 1rem 4rem;
+    }
+}
+
+@media (max-width:991px){
+
+    header{
+        left: -120%;
+    }
+
+    #menu{
+        display: block;
+    }
+
+    header.toggle{
+        left: 0%;
+    }
+
+    body{
+        padding: 0;
+    }
+}
+
+@media (max-width:768px){
+
+    html{
+        font-size: 50%;
+    }
+}
+
+@media (max-width:400px){
+
+    header{
+        width: 100%;
+    }
+
+    .heading{
+        margin: 0 3rem;
+    }
+
+    .about .row .counter .box{
+        width: 100%;
+    }
+    
+    .education .box-container .box{
+        width: 100%;
+    }
+
+    .portfolio .box-container .box{
+        width: 100%;
+    }
+
+    .contact .row form {
+        margin: 3rem 0;
+    }
+
+    
+}
+
+
+
+.right-image {
+    position: absolute; /* Fixa a imagem na posição especificada */
+    top: 50%; /* Alinha verticalmente ao meio da página */
+    right: 0; /* Alinha horizontalmente à direita da página */
+    transform: translateY(-50%); /* Ajusta a posição vertical para centralizar a imagem */
+    width: 700px; /* Define uma largura fixa para a imagem, ajuste conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Garante que a imagem se ajuste corretamente */
+    animation: pixelate 3s forwards; /* Aplica a animação de pixelização */
+    z-index: 10; /* Garante que a imagem esteja sobre outros elementos */
+    
+}
+
+@keyframes pixelate {
+    0% {
+        filter: blur(10px); /* Começa com a imagem desfocada */
+        opacity: 0.2; /* Imagem quase invisível */
+    }
+    100% {
+        filter: blur(0); /* Fica nítida ao final da animação */
+        opacity: 1; /* Imagem completamente visível */
+    }
+}
+
+

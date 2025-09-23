@@ -1,0 +1,65 @@
+.features{
+    max-width: 1280px;
+    margin-inline: auto;
+}
+
+.features-wrapper {
+    background-color: #131325;
+    padding: 4rem 2rem;
+    max-width: 1280px; /* Ajuste conforme necessário */
+    margin: 0 auto; /* Centraliza o contêiner */
+    border-radius: 12px;
+}
+
+
+.features__text{
+    text-align: center;
+}
+
+.features--description{
+    max-width: 60ch;
+    margin-inline: auto;
+}
+.feature__cards{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 4rem;
+    margin-top: 6rem;
+}
+
+.feature__card{
+    background-color: #25283d;
+    padding: 6rem 2rem 2rem 2rem;
+    border-radius: 12px;
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, e flex-basis */
+    min-width: 300px;
+    position: relative;
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+
+    
+}
+
+.feature__card-img{
+    width: 6rem;
+    position: absolute;
+    top: -3rem;
+    left: 2rem;
+}
+
+.feature__card-title{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.feature__card-description{
+    color: rgba(255, 2555, 255, 0.6);
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .feature__card {
+        flex: 1 1 100%; /* Faz com que cada card ocupe 100% da largura do contêiner */
+        min-width: auto; /* Remove a largura mínima para melhor ajuste */
+    }
+}

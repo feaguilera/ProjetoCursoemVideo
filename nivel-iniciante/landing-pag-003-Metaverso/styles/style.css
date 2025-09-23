@@ -1,0 +1,148 @@
+:root{
+    --font-primary: "Exo2", sans-serif;
+    --font-secondary: "Manrope", sans-serif;
+
+    --clr-light: #f5f5f5;
+    --clr-gray: #bbb;
+    --clr-border: #aa0989;
+    --clr-bnt-bg: #2a2362;
+    --clr-primary: rgba(255, 37, 212, 1);
+    --clr-secondary: rgba(57, 63, 210, 1);
+}
+
+*,
+*::before
+*::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    line-height: calc(1em + 0.5rem);
+}
+
+body{
+    min-height: 100vh;
+    color:var(--clr-light);
+    font-family: var(--font-secondary);
+}
+
+img,
+picture,
+video,
+svg{
+    display: block;
+    max-width: 100%;
+}
+
+
+button{
+    border: none;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.bg{
+    height: 100vh;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+
+
+
+/* Navegação padrão para telas grandes */
+.nav__ul {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+/* Botão hambúrguer inicialmente oculto */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2rem;
+    height: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-toggle__bar {
+    width: 100%;
+    height: 0.25rem;
+    background-color: var(--clr-light);
+}
+
+/* Navegação padrão para telas grandes */
+.nav__ul {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+/* Botão hambúrguer inicialmente oculto */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2rem;
+    height: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-toggle__bar {
+    width: 100%;
+    height: 0.25rem;
+    background-color: var(--clr-light);
+}
+
+@media (max-width: 768px) {
+    /* Tornar o botão hambúrguer visível */
+    .nav-toggle {
+        display: flex;
+    }
+
+    /* Ocultar o menu de navegação por padrão */
+    .nav__ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--clr-bnt-bg);
+        border-top: 1px solid var(--clr-border);
+        padding: 1rem;
+    }
+
+    /* Mostrar o menu quando a classe "open" está presente */
+    .nav__ul.open {
+        display: flex;
+    }
+
+    .nav__li {
+        margin-bottom: 1rem;
+    }
+
+    .nav__link {
+        font-size: 1.5rem;
+        color: var(--clr-light);
+    }
+
+    .btn {
+        display: none; /* Ocultar o botão de contato em telas pequenas */
+    }
+}
+
+/* Animação de transição para o menu */
+.nav__ul {
+    transition: transform 0.3s ease-in-out;
+}
