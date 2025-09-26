@@ -1,0 +1,576 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+
+}
+
+header{
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    background-color: #52050A;
+    backdrop-filter: blur(8px);
+    color: #00e5fa;
+    padding: 0.5rem 1.5rem;
+    border-radius: 3rem;
+    z-index: 1000;
+}
+
+.logo{
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    white-space: nowrap;
+
+    transition: 0.3s ease-in-out;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.nav-links{
+    display: flex;
+    gap: 2rem;
+}
+li a{
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    font-size: 20px;
+}
+li a::before{
+    position: absolute;
+    content: '';
+    width: 0;
+    left: 0;
+    height: 5px;
+    top: 25px;
+    border-radius: 1rem;
+    transition: 0.3 ease-in-out;
+    background: linear-gradient(to left, #52050A, rgb(181, 75, 181));
+}
+li a:hover::before{
+    width: 100%;
+}
+.visit-btn{
+    padding: 0.8rem 1.5rem;
+    border-radius: 3rem;
+    border: none;
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    text-wrap: nowrap;
+    transition: 0.3 ease-in-out;
+    background: linear-gradient(to right, #52050A,#EA9010);
+}
+.visit-btn:hover{
+    background: linear-gradient(to right, #52050A, #b700ff);
+    transform: scale(1.03);
+}
+#menu-icon{
+    font-size: 2rem;
+    display: none;
+}
+section{
+    min-height: 100vh;
+    padding: 8rem 12%;
+    width: 100%;
+    position: relative;
+}
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about img {
+    width: 30vw;
+    border-radius: 50%;
+    border: 5px solid #52050A; /* cor da borda */
+}
+
+.about img {
+    width: 30vw;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 5px #52050A; /* sombra colorida */
+}
+
+.about img {
+    width: 30vw;
+    border-radius: 50%;
+    box-shadow: 0 0 10px ##52050A, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.about img:hover {
+    box-shadow: 0 0 20px #b700ff, 0 0 40px #b700ff, 0 0 60px #b700ff;
+}
+
+
+.about .about-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+
+}
+.about img{
+    width: 30vw;
+    border-radius: 50%;
+}
+.info-box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.info-box h3{
+    font-size: 1.8rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+.info-box h1{
+    font-size: 4rem;
+    font-weight: 600;
+}
+.info-box span{
+    background: linear-gradient(to right, #52050A, rgb(255, 0, 255));
+    background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+}
+.btn-group{
+    display: flex;
+    gap: 1rem;
+}
+.btn{
+    border-radius: 3rem;
+    padding: 0.5rem 1.0rem;
+    border: 2px solid white;
+    cursor: pointer;
+    font-weight: 500;
+    text-wrap: nowrap;
+    transition: 0.3 ease-in-out;
+}
+
+.btn-group li a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: rgb(18, 12, 12);        /* cor do texto */
+  font-weight: bold;
+  border-radius: 8px;  /* cantos arredondados */
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+
+
+
+.projects-grid .btn-group a {
+    color: black; 
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.projects-grid .btn-group a:hover {
+    color: #ffffff; 
+}
+
+
+
+.btn:hover{
+    background-color: #52050A;
+    color: white;
+}
+.socials{
+    display: flex;
+    gap: 2rem;
+}
+.socials i{
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.socials i:hover{
+    transform: scale(1.1);
+}
+
+.section-title{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.experience-info{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 5rem;
+}
+.experience img{
+    width: 24vw;
+    border-radius: 3rem;
+}
+.grid{ 
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+.grid-card{
+    border: 2px solid #52050A;
+    border-radius: 3rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: left;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.grid-card:hover{
+    transform: scale(1.02);
+    background-color: #52050A;
+    color: white;
+}
+.grid-card i{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.grid-card span{
+    font-size: 1.5rem;
+    font-weight: 500;
+    background: linear-gradient(to right, #000000, #ff00ff);
+    background-clip: text;
+    color: transparent;
+}
+::-webkit-scrollbar{
+    width: 20px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgb(219, 219, 219);
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, #009dff, #b700ff);
+}
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 2rem;
+}
+.project-card{
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    border: 2px solid black;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}   
+.project-card:hover{
+    background-color: #52050A;
+    color: white;
+    transform: translateY(-10px)scale(1.02);
+}
+.project-card img{
+    width: 15vw;
+    border-radius: 1rem;
+}
+.project-card:hover .btn{
+    border: 2px solid white;
+    color: white;
+}
+.project-card:hover .btn:hover{
+    border: 2px solid white;
+    background-color: rgb(51, 33, 33);
+    color: #52050A;  
+}
+.project-card h3{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.input-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+.input-box input{
+    border-radius: 3rem;
+    border: 2px solid black;
+    padding: 2rem 8rem;
+    font-size: 3rem;
+}
+.input-box input::-moz-placeholder{
+    font-size: 3rem;
+}
+.input{
+    position: relative;
+}
+.input i{
+    position: absolute;
+    font-size: 4rem;
+    top: 50%;
+    left: 10px;
+    transform: translate(50%,-50%);
+}
+
+footer{
+    bottom: 0;
+    left: 0;
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+footer ul{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+footer ul li a{
+    color: black;
+    font-weight: 600;
+}
+.copyright{
+    font-size: 300;
+    margin-top: 2rem;
+}
+
+
+@media(max-width:1280px){
+    header{
+        padding: 1rem 2rem;
+        gap: 2rem;
+    }
+    .about .about-container{
+        gap: 3rem;
+    }
+    .experience-info{
+        flex-direction: column;
+    }
+    .info-box input{
+        padding: 2rem 5rem;
+        font-size: 2.5rem;
+    }
+    .input input::placeholder{
+        font-size: 2.5rem;
+    }
+    .input-box i{
+        font-size: 2.5rem;
+    }
+}
+
+@media(max-width:768px){
+    header{
+        gap: 1rem;
+        padding: 1rem 1rem;
+    }
+    header .logo{
+        font-size: 1rem;
+    }
+    header .visit-btn{
+        display: none;
+    }
+    .about-container{
+        flex-direction: column;
+    }
+    .input-box input{
+        padding: 1rem 2rem;
+        font-size: 1.8rem;
+    }
+    .info-box input::placeholder{
+        font-size: 1.5rem;
+    }
+    .info-box i{
+        display: none;
+    }
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .experience-info img{
+        width: 70vw;
+    }
+}
+
+@media(max-width:600px){
+    header #menu-icon{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        top: 100%;
+        margin-top: 1rem;
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.9);
+        border-radius: 3rem;
+        display: none;
+    }
+    .nav-links li{
+        margin-top: 1.5rem;
+        padding: 1rem;
+    }
+    .nav-links.active{
+        display: block;
+    }
+    header{
+        padding: 1rem 5rem;
+        gap: 8rem;
+    }
+    header .loho{
+        font-size: 1.5rem;
+    }
+    .about-container img{
+        width: 80vw;
+    }
+    .input-box input{
+        padding: 0.5rem 3rem;
+        width: 80%;
+        font-size: 1.5rem;
+    }
+    .input-box input::placeholder{
+        font-size: 1.5rem;
+    }
+    footer ul{
+        gap:1rem;
+    }
+}
+
+
+.skills {
+    padding: 4rem 2rem;
+    justify-content: center;
+    background: #222;
+    color: #fff;
+}
+
+.skills .heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+.skills .heading span {
+    color: var(--yellow);
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skill-column {
+    flex: 1 1 30%;
+    margin: 1rem;
+}
+
+.skill-item {
+    position: relative;
+    background: #333;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: scale(1.1);
+}
+
+.icon {
+    font-size: 4rem;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.skill-info {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.skill-item:hover .skill-info {
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+.skill-info h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #b700ff;
+    
+}
+
+.skill-info p {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.typing{
+    font-family: monospace;
+    border-right: 4px solid;
+    width: 45ch;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(45) infinite alternate-reverse;
+}
+
+@keyframes typing{
+    from{
+        width: 0ch;
+    }
+}
+
+@keyframes blinking{
+    50%{
+        border-color: transparent;
+    }
+}
+
+.projects-grid .btn-group li a {
+    color: #ffffff; /* cor desejada */
+    background-color: #52050A;
+    border-radius: 10px;
+    padding: 120px;
+}
+
+.projects-grid .btn-group li a:hover {
+    color:#ffffff /* cor quando passar o mouse */
+}
+
+
+
